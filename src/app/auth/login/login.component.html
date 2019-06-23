@@ -1,3 +1,37 @@
-<p>
-  login works!
-</p>
+<!-- reactive approach
+2 Fields - email and password + validation,
+show errors and hints (dont check length of password)
+make the form submittable -> disable submit if invalid -->
+<div class="loginForm">
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+    fxLayoutGap="10px">
+    <!-- E-mail -->
+    <mat-form-field >
+      <input
+        type="email"
+        matInput
+        placeholder="Your Email"
+        formControlName="email">
+      <mat-hint>Please enter a valid E-mail</mat-hint>
+      <mat-error>Invalid or missing e-mail</mat-error>
+    </mat-form-field>
+
+
+    <!-- Password -->
+    <mat-form-field>
+      <input
+        type="password"
+        matInput
+        placeholder="Your Password"
+        formControlName="password">
+      <mat-hint>Please enter your password</mat-hint>
+      <mat-error>Invalid Password</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" color="primary" [disabled]="!loginForm.valid">Submit</button>
+  </form>
+</div>
