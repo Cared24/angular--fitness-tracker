@@ -32,6 +32,7 @@ make the form submittable -> disable submit if invalid -->
       <mat-error>Invalid Password</mat-error>
     </mat-form-field>
 
-    <button mat-raised-button type="submit" color="primary" [disabled]="!loginForm.valid">Submit</button>
+    <button *ngIf="!isLoading" mat-raised-button type="submit" color="primary" [disabled]="!loginForm.valid">Submit</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
   </form>
 </div>
