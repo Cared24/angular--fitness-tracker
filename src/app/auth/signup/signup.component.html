@@ -58,8 +58,9 @@
     </mat-checkbox>
 
     <!-- Submit -->
-    <button type="submit" mat-raised-button color="primary" [disabled]="!f.valid">
+    <button *ngIf="!(isLoading$ | async)" type="submit" mat-raised-button color="primary" [disabled]="!f.valid">
       Submit
     </button>
+    <mat-spinner *ngIf="isLoading$ | async"></mat-spinner>
   </form>
 </section>
