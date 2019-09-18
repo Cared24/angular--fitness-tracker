@@ -1,5 +1,9 @@
 # FitnessTracker
 
+FireBase URL:
+https://ng-fitness-tracker-da85e.firebaseapp.com
+Project Console: https://console.firebase.google.com/project/ng-fitness-tracker-da85e/overview
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Development server
