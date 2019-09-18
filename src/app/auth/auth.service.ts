@@ -3,7 +3,6 @@ import { User } from "./user.model";
 import { AuthData } from "./auth-data.model";
 import { AngularFireAuth } from "angularfire2/auth";
 
-import { Subject } from "rxjs";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { UIService } from '../shared/ui.service';
